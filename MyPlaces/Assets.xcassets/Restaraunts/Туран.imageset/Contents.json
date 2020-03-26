@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Turan.jpeg",
+      "filename" : "Туран.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Turan2.jpeg",
+      "filename" : "Туран-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Turan3.jpeg",
+      "filename" : "Туран-2.jpg",
       "scale" : "3x"
     }
   ],
