@@ -32,20 +32,26 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-v6-sdV">
                                             <rect key="frame" x="96" y="8" width="302" height="69"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0l-8M-hME">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0l-8M-hME">
                                                     <rect key="frame" x="0.0" y="0.0" width="302" height="29"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-55-JOc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-55-JOc">
                                                     <rect key="frame" x="0.0" y="32" width="302" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="VrO-Te-0HF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUW-qf-XxO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUW-qf-XxO">
                                                     <rect key="frame" x="0.0" y="53" width="302" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="qY0-Nd-1dP"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -235,11 +241,22 @@
                     <navigationItem key="navigationItem" title="New Place" id="ZbE-Ka-22w">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="juA-Nm-Iog">
                             <connections>
-                                <segue destination="hFC-aE-nO4" kind="unwind" unwindAction="cancelAction:" id="jbh-BC-9CX"/>
+                                <action selector="cancelAction:" destination="05d-8l-m9R" id="XLQ-n8-6qO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kdG-md-o00"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kdG-md-o00">
+                            <connections>
+                                <segue destination="hFC-aE-nO4" kind="unwind" unwindAction="unwindSegue:" id="JHw-C6-I3p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="placeImage" destination="iYi-us-47J" id="2ah-cY-APj"/>
+                        <outlet property="placeLocation" destination="sX5-H0-Qmf" id="zpA-nj-ACO"/>
+                        <outlet property="placeName" destination="qTo-kV-Yyl" id="Qs6-0Y-mmt"/>
+                        <outlet property="placeType" destination="KY8-NA-AU4" id="DAK-6b-MmD"/>
+                        <outlet property="saveButton" destination="kdG-md-o00" id="VU7-DV-IsP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wC5-9e-lX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hFC-aE-nO4" userLabel="Exit" sceneMemberID="exit"/>

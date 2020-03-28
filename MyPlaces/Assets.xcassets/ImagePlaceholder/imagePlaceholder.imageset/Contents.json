@@ -2,17 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Ronni.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Ronni3.jpeg",
+      "filename" : "imagePlaceholder@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Ronni2.jpeg",
+      "filename" : "imagePlaceholder@3x.png",
       "scale" : "3x"
     }
   ],

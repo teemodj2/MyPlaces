@@ -6,34 +6,23 @@
 //  Copyright © 2020 LevIlin. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
-struct Place {
+class Place: Object {
     
-    var name: String
-    var location: String
-    var type: String
-    var image: String
-    
-    static let restaurantNames = ["Burger King",
-                               "Каравелла",
-                               "Ширван",
-                               "MacDonald's",
-                               "Охотничий рай",
-                               "Вилка",
-                               "Ронни",
-                               "У Гуссейна",
-                               "Туран"]
-    
-    // метод для заполнения массива places из массива restaurantNames
-    static func  getPlaces () -> [Place] {
+    @objc dynamic var name = ""
+    @objc dynamic var location: String?
+    @objc dynamic var type: String?
+    @objc dynamic var imageData: Data?
+   
+    convenience init (name: String, location: String?, type: String?, imageData: Data?) {
         
-        var places = [Place]()
+        self.init()
+        self.name = name
+        self.location = location
+        self.type = type
+        self.imageData = imageData
         
-        
-        for place in restaurantNames {
-            places.append(Place(name: place, location: "Ижевск", type: "Ресторан", image: place))
-        }
-        return places
     }
+    
 }
